@@ -86,7 +86,7 @@ nav a.active {
   border-bottom: 2px solid #ff9f68;
 }
 
-header > a {
+header>a {
   font-weight: bold;
   font-size: 1.5rem;
   text-decoration: none;
@@ -186,4 +186,32 @@ footer {
   text-align: center;
   padding: 1.5rem;
   color: #b8a5c0;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.stats div {
+  flex: 1 1 180px;
+  max-width: 220px;
+  text-align: center;
+  padding: 20px;
+  background: #2a1838;
+  border: 1px solid #4a2d5e;
+  border-radius: 20px;
+}
+
+.stats strong {
+  display: block;
+  font-size: 29px;
+  color: #ff9f68;
+}
+
+.stats span {
+  color: #b8a5c9;
 }
