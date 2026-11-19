@@ -171,7 +171,8 @@ h2 {
   padding: 1.5rem;
   background: #2a1838;
   border: 1px solid #4a2d5e;
-  border-left: 4px solid #ff9f68;
+  border-left: 4px solid #5eead4 border-radius: 20px;
+  solid #ff9f68;
   border-radius: 20px;
   color: #b8a5c9;
 }
@@ -214,4 +215,181 @@ footer {
 
 .stats span {
   color: #b8a5c9;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.tabs button {
+  padding: 10px 22px;
+  background: #2a1838;
+  color: #fff4e6;
+  border: 1px solid #4a2d5e;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.tabs button:hover {
+  border-color: #ff9f68;
+}
+
+.tabs button .active {
+  background: #ff9f68;
+  color: #1b1024;
+  border-color: #ff9f68;
+}
+
+.top-three {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.top-three article {
+  flex: 1 1 220px;
+  max-width: 260px;
+  text-align: center;
+  background: #2a1838;
+  border: 1px solid #4a2d5e;
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.top-three article .first {
+  border-color: #ff9f68;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.top-three .medal {
+  font-size: 40px;
+}
+
+.top-three h3 {
+  color: #ff9f68;
+  margin: 8px;
+}
+
+.top-three p {
+  color: #b8a5c9;
+}
+
+.controls {
+  max-width: 800px;
+  margin: 0 auto 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.controls input,
+.controls select {
+  padding: 11px 16px;
+  background: #2a1838;
+  color: #fff4e6;
+  border: 1px solid #4a2d5e;
+  border-radius: 12px;
+  font: inherit;
+}
+
+.controls input {
+  flex: 1 1 240px;
+}
+
+.controls input:focus,
+.controls select:focus {
+  border-color: #ff9f68;
+}
+
+.controls-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.table-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow-x: auto;
+  border: 1px solid #4a2d5e;
+  border-radius: 20px;
+  background: #2a1838;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 16px 20px;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px, solid #3a2250;
+}
+
+th {
+  color: #b8a5c0;
+  font-weight: 600;
+  border-bottom: 1px solid #4a2d5e;
+}
+
+tr.last td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: #3a2250;
+}
+
+td.rank {
+  color: #ff9f68;
+  font-weight: 700;
+}
+
+.you {
+  max-width: 800px;
+  margin: 24px auto 0;
+  padding: 20px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background: #2a1838;
+  border: 1px solid #4a2d5e;
+  border-left: 4px solid #5eead4;
+  border-radius: 20px;
+}
+
+.you p {
+  color: #b8a5c9;
+}
+
+.you strong {
+  color: #5eead4;
+}
+
+.you .btn {
+  margin-top: 0;
+}
+
+.note {
+  text-align: center;
+  color: #b8a5c9;
+  margin-top: 16px;
 }
