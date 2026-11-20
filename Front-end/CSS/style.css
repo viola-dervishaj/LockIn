@@ -240,10 +240,18 @@ footer {
   border-color: #ff9f68;
 }
 
-.tabs button .active {
+.tabs button.active {
   background: #ff9f68;
   color: #1b1024;
   border-color: #ff9f68;
+}
+
+.board {
+  display: none;
+}
+
+.board.active {
+  display: block;
 }
 
 .top-three {
@@ -265,7 +273,7 @@ footer {
   padding: 24px;
 }
 
-.top-three article .first {
+.top-three article.first {
   border-color: #ff9f68;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -277,7 +285,7 @@ footer {
 
 .top-three h3 {
   color: #ff9f68;
-  margin: 8px;
+  margin-top: 8px;
 }
 
 .top-three p {
@@ -311,7 +319,7 @@ footer {
   border-color: #ff9f68;
 }
 
-.controls-label {
+.control-label {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -339,7 +347,7 @@ td {
   padding: 16px 20px;
   text-align: left;
   white-space: nowrap;
-  border-bottom: 1px, solid #3a2250;
+  border-bottom: 1px solid #3a2250;
 }
 
 th {
@@ -353,7 +361,7 @@ tr.last td {
 }
 
 tbody tr:hover {
-  background: #3a2250;
+  background: #b8a5c9;
 }
 
 td.rank {

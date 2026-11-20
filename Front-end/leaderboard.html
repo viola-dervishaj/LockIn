@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="features.html">Features</a></li>
-                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="leaderboard.html" class="active">Leaderboard</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="register.html">Register</a></li>
             </ul>
@@ -36,32 +36,10 @@
                 <div><strong>42 days</strong><span>Longest streak</span></div>
             </div>
             <div class="tabs">
-                <button type="button" class="active">This week</button>
-                <button type="button">This month</button>
-                <button type="button">All time</button>
+                <button type="button" class="active" data-board="week">This week</button>
+                <button type="button" data-board="month">This month</button>
+                <button type="button" data-board="all">All time</button>
             </div>
-
-            <div class="top-three">
-                <article>
-                    <span class="medal">🥈</span>
-                    <h3>Rron</h3>
-                    <p>Level 11 · 790 XP</p>
-                    <p>🔥 21-day streak</p>
-                </article>
-                <article class="first">
-                    <span class="medal">🥇</span>
-                    <h3>Arta</h3>
-                    <p>Level 12 · 840 XP</p>
-                    <p>🔥 28-day streak</p>
-                </article>
-                <article>
-                    <span class="medal">🥉</span>
-                    <h3>Rina</h3>
-                    <p>Level 10 · 720XP</p>
-                    <p>🔥 19-day streak</p>
-                </article>
-            </div>
-
             <div class="controls">
                 <label for="search" class="control-label">Search by name</label>
                 <input type="text" id="search" placeholder="Search by name">
@@ -73,90 +51,211 @@
                     <option>Sort by level</option>
                 </select>
             </div>
+            <div class="board active" id="week">
+                <div class="top-three">
+                    <article>
+                        <span class="medal">🥈</span>
+                        <h3>Rron</h3>
+                        <p>Level 11 · 790 XP</p>
+                        <p>🔥 21-day streak</p>
+                    </article>
+                    <article class="first">
+                        <span class="medal">🥇</span>
+                        <h3>Arta</h3>
+                        <p>Level 12 · 840 XP</p>
+                        <p>🔥 28-day streak</p>
+                    </article>
+                    <article>
+                        <span class="medal">🥉</span>
+                        <h3>Rina</h3>
+                        <p>Level 10 · 720 XP</p>
+                        <p>🔥 19-day streak</p>
+                    </article>
+                </div>
 
-            <div class="table-wrap">
-                <table>
-                    <thead>
-                        <tr>
-                            <th scope="col">Rank</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Level</th>
-                            <th scope="col">XP</th>
-                            <th scope="col">Hours</th>
-                            <th scope="col">Streak</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="rank">4</td>
-                            <td>Jon</td>
-                            <td>9</td>
-                            <td>650</td>
-                            <td>10 h</td>
-                            <td>🔥 14</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">5</td>
-                            <td>Era</td>
-                            <td>9</td>
-                            <td>610</td>
-                            <td>9 h</td>
-                            <td>🔥 12</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">6</td>
-                            <td>Gent</td>
-                            <td>8</td>
-                            <td>540</td>
-                            <td>8 h</td>
-                            <td>🔥 9</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">7</td>
-                            <td>Vesa</td>
-                            <td>7</td>
-                            <td>480</td>
-                            <td>7 h</td>
-                            <td>🔥 7</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">8</td>
-                            <td>Altin</td>
-                            <td>6</td>
-                            <td>410</td>
-                            <td>6 h</td>
-                            <td>🔥 5</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">9</td>
-                            <td>Rita</td>
-                            <td>6</td>
-                            <td>360</td>
-                            <td>5 h</td>
-                            <td>🔥 4</td>
-                        </tr>
-                        <tr class="last">
-                            <td class="rank">10</td>
-                            <td>Leart</td>
-                            <td>5</td>
-                            <td>300</td>
-                            <td>4 h</td>
-                            <td>🔥 3</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Rank</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Level</th>
+                                <th scope="col">XP</th>
+                                <th scope="col">Hours</th>
+                                <th scope="col">Streak</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="rank">4</td>
+                                <td>Jon</td>
+                                <td>9</td>
+                                <td>650</td>
+                                <td>10 h</td>
+                                <td>🔥 14</td>
+                            </tr>
+                            <tr>
+                                <td class="rank">5</td>
+                                <td>Era</td>
+                                <td>9</td>
+                                <td>610</td>
+                                <td>9 h</td>
+                                <td>🔥 12</td>
+                            </tr>
+                            <tr>
+                                <td class="rank">6</td>
+                                <td>Gent</td>
+                                <td>8</td>
+                                <td>540</td>
+                                <td>8 h</td>
+                                <td>🔥 9</td>
+                            </tr>
+                            <tr>
+                                <td class="rank">7</td>
+                                <td>Vesa</td>
+                                <td>7</td>
+                                <td>480</td>
+                                <td>7 h</td>
+                                <td>🔥 7</td>
+                            </tr>
+                            <tr>
+                                <td class="rank">8</td>
+                                <td>Altin</td>
+                                <td>6</td>
+                                <td>410</td>
+                                <td>6 h</td>
+                                <td>🔥 5</td>
+                            </tr>
+                            <tr>
+                                <td class="rank">9</td>
+                                <td>Rita</td>
+                                <td>6</td>
+                                <td>360</td>
+                                <td>5 h</td>
+                                <td>🔥 4</td>
+                            </tr>
+                            <tr class="last">
+                                <td class="rank">10</td>
+                                <td>Leart</td>
+                                <td>5</td>
+                                <td>300</td>
+                                <td>4 h</td>
+                                <td>🔥 3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="board" id="month">
+                <div class="top-three">
+                    <article>
+                        <span class="medal">🥈</span>
+                        <h3>Arta</h3>
+                        <p>Level 12 · 2,980 XP</p>
+                        <p>🔥 28-day streak</p>
+                    </article>
+                    <article class="first">
+                        <span class="medal">🥇</span>
+                        <h3>Rron</h3>
+                        <p>Level 11 · 3,105 XP</p>
+                        <p>🔥 21-day streak</p>
+                    </article>
+                    <article>
+                        <span class="medal">🥉</span>
+                        <h3>Era</h3>
+                        <p>Level 9 · 2,610 XP</p>
+                        <p>🔥 12-day streak</p>
+                    </article>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Rank</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Level</th>
+                                <th scope="col">XP</th>
+                                <th scope="col">Hours</th>
+                                <th scope="col">Streak</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="rank">4</td>
+                                <td>Rina</td>
+                                <td>10</td>
+                                <td>2,590</td>
+                                <td>43 h</td>
+                                <td>🔥 19</td>
+                            </tr>
+                            <tr>
+                                <td class="rank">5</td>
+                                <td>Gent</td>
+                                <td>8</td>
+                                <td>2,200</td>
+                                <td>38 h</td>
+                                <td>🔥 9</td>
+                            </tr>
+                            <tr>
+                                <td class="rank">6</td>
+                                <td>Jon</td>
+                                <td>9</td>
+                                <td>2,150</td>
+                                <td>36 h</td>
+                                <td>🔥 14</td>
+                            </tr>
+                            <tr>
+                                <td class="rank">7</td>
+                                <td>Altin</td>
+                                <td>6</td>
+                                <td>1,800</td>
+                                <td>30 h</td>
+                                <td>🔥 5</td>
+                            </tr>
+                            <tr>
+                                <td class="rank">8</td>
+                                <td>Vesa</td>
+                                <td>7</td>
+                                <td>1,720</td>
+                                <td>29 h</td>
+                                <td>🔥 7</td>
+                            </tr>
+                            <tr>
+                                <td class="rank">9</td>
+                                <td>Leart</td>
+                                <td>5</td>
+                                <td>1,400</td>
+                                <td>24 h</td>
+                                <td>🔥 3</td>
+                            </tr>
+                            <tr class="last">
+                                <td class="rank">10</td>
+                                <td>Rita</td>
+                                <td>6</td>
+                                <td>1,330</td>
+                                <td>22 h</td>
+                                <td>🔥 4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div class="you">
                 <p><strong>Your rank:</strong> log in to see where you stand.</p>
                 <a href="login.html" class="btn">Log in</a>
             </div>
-            <p class="note">
-                Sample data. Real rankings appear onse accounts are connected
-            </p>
+            <p class="note">Sample data. Real rankings appear once accounts are connected.</p>
         </section>
+        <section class="cta">
+            <h2>Want your name here?</h2>
+            <p>Create an account and start earning XP.</p>
+            <a href="register.html" class="btn">Get started</a>
 
+        </section>
     </main>
-
+    <footer>
+        <p>Stay locked in or stay delusional. LockIn © 2026</p>
+    </footer>
 </body>
 
 </html>
